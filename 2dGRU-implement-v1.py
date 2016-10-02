@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*-
 """
-Created on Tue Sep 27 13:13:34 2016
 
 @author: Yang
 """
