@@ -370,8 +370,8 @@ def gradcheckfornewdata(dpara,para,sminus,splus,parameter,index=0,d_h=5):
     print('our calculation of the derivative of the function',left)
     print('The derivative of the function calculate by the defination',((Jplus-Jminus)/(2e-6))[-1][-1])
 def minbatch(parameter,sminus,splus,d_h,d_s,batch,rho,maskval):
+    loop=0
     while 1:
-        loop=0
         loop+=1
         if loop==1000:
             break
