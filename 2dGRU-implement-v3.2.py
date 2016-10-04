@@ -568,6 +568,7 @@ def minbatch(parameter,sminus,splus,d_h,d_s,batch,rho,maskval):
                 parameter['b']-=ave_db*(rho[16]/np.sqrt(ada_db))
                 parameter['w_s']-=ave_dw_s*(rho[17]/np.sqrt(ada_dw_s))
                 
+                #这部分是dropout，mask是被遮挡的部分，有待于进一步验证
                 mask=dict()
                
                 if maskval==1:
@@ -758,7 +759,12 @@ def make_rho():
     rho[16]=1e-2   
     rho[17]=1e-2
     return rho
-    
+   
+import pickle
+with open('sminus','rb') as f:   
+    sminus=pickle.load(f)
+with open('splus','rb') as f:   
+    splus=pickle.load(f)    
 d_h=5;d_s=1
 parameter=initiallize_parameter(d_h,d_s)
 wrt=copy.deepcopy(parameter)
