@@ -811,4 +811,3 @@ print('runtime:',end-start)
 
 with open(u'result_3.7_multi10_dropout_lossplot_No1.txt','wb') as f:   
     pickle.dump(parameter,f)
-
