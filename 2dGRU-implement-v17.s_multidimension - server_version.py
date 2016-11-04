@@ -679,9 +679,9 @@ def make_rho():
 import pickle
 from time import clock
 
-with open(u'C:\\Users\\Lab\\Desktop\\实验\\欧氏距离归一化数据\\S_reduce.txt','rb') as f:
+with open('S_reduce.txt','rb') as f:
     sminus_origin=pickle.load(f)
-with open(u'C:\\Users\\Lab\\Desktop\\实验\\欧氏距离归一化数据\\S_plus.txt','rb') as f:
+with open('S_minus.txt','rb') as f:
     splus_origin=pickle.load(f)
     
 d_h=5;d_s=1
